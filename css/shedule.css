@@ -18,90 +18,48 @@ body{
 /* ------------------
 start header area
 ---------------------------- */
-
 .header-area{
     width: 100%;
     height: 90vh;
+    padding: 0 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background:linear-gradient(rgba(44, 51, 51,0.9),rgb(57, 91, 100));
-    color: #ffff;
-    padding: 0px 30px;
+    background: linear-gradient(rgba(228, 220, 207, 0.4),rgba(125, 157, 156,0.9));
+
 }
 .header-section{
     width: 50%;
 }
 .header-section h1{
     font-weight: 700;
-    font-size: 55px;
+    font-size: 50px;
+    color: #605e8a;
+    text-shadow: 3px 3px 3px rgb(130, 129, 137);
 }
 .header-section p{
-    font-weight: 500;
+    font-weight: 700;
     font-size: 18px;
+    color: rgb(41, 40, 99);
 }
-.header-section button{
-    padding: 15px 25px;
+.header-area button{
+    padding: 12px 40px;
     margin-top: 20px;
-    background-color:#92A9BD;
+    background-color: #055052;
     border: none;
-    border-radius: 5px;
-    width: 200px;
+    border-radius: 10px;
 }
-.header-section button {
-    animation: button;
-    animation-timing-function: ease-out;
-    animation-duration: 4s;
-    animation-direction: alternate;
-    position: relative;
-    animation-play-state: running;
-
-}
-@keyframes button {
-    0%{
-        width: 200px;
-        left: 0;
-    }
-
-    20%{
-        left: 230px;
-         width: 300px;
-    }
-    40%{
-        left:100px ;
-        width:250px;
-    }
-    60%{
-        left: 250px;
-        width: 300px;
-    }
-    80%{
-        left: 200px;
-        width: 280px;
-    }
-    100%{
-        left: 0;
-        width: 200px;
-    }
-    
-}
-.header-section button a{
+.header-area button a{
     font-size: 18px;
     font-weight: 700;
-    color: #fff;
     text-decoration: none;
+    color: #fff;
 }
-.header-section button a .fa-arrow-right{
-    margin-left: 5px;
+.fa-angle-right{
+    margin-left: 10px;
 }
-
-.banner{
-    width: 100%;
-    height: 90vh;
-    background-image:url(../player/gettyimages-451863810-612x612-removebg-preview.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 150%;
+.header-section img{
+    width: 80%;
 }
 /* ------------------
 start main section
@@ -140,7 +98,7 @@ start main section
     background-color:#92A9BD;
     transition: 2s;
 }
-.section-link button:last-child{
+.section-link button:first-child{
     background-color:#92A9BD;
 }
 .section-link button a{
@@ -155,71 +113,32 @@ start main section
     transition: 1s;
 }
 .main-section-second{
-    width: 100%;
+    width:100%;
     display: grid;
-    grid-template-columns: repeat(3 ,1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3 ,200px);
     gap: 15px;
 }
 .main-section-second .section-contet{
     border-radius: 10px;
     box-shadow: 1px 1px 10px rgb(208, 206, 206);
+    padding: 10px;
+}
+.flag{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .section-contet .content{
-    margin-left: 20px;
-}
-.section-contet img{
-    width: 100%;
-    height: 150px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-.section-contet button{
-    padding: 5px 15px;
-    margin: 10px 0;
-    background-color: transparent;
-    border-radius: 5px;
-}
-.section-contet button a{
-    text-decoration: none;
-    text-transform: capitalize;
-    color: black;
-
-}
-.section-contet h3{
-    font-size: 16px;
-}
-.times-comment{
-    display: flex;
-    width: 60%;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
-}
-.times-comment .fa-clock,.fa-comment-dots {
-    margin-right: 5px;
-}
-/*------------------------
- last-section-button----
- -------------------------- */
-.last-section-button{
-    margin-top: 80px;
     text-align: center;
-    display: none;
-
+    margin-top: 10px;
 }
-.last-section-button button{
-    width: 180px;
-    height: 50px;
-    top: 50%;
-    background-color: #92A9BD;
-    border: none;
-    border-radius: 5px;
+.content h3 span{
+    margin: 0 2px;
 }
-.last-section-button button a{
-    font-size: 20px;
-    font-weight: 500;
-    color:#fff;
-    text-decoration: none;
+.content p span{
+    margin: 0 3px;
 }
 
 /* -----------------------
@@ -276,8 +195,6 @@ start footer-area
     font-size: 30px;
     color: #fff;
 }
-
-
 /* -------------
 media quarie 
 ------------------------------
@@ -314,10 +231,8 @@ media quarie
     .header-section button a{
         font-size: 14px;
     }
-    .banner{
+    .header-section img{
         height: 100%;
-        background-size: cover;
-        background-position:center;
         margin-bottom: 10px;
         padding: 0;
     }
@@ -347,9 +262,6 @@ media quarie
     .section-contet img{
         height: auto;
     }
-    .times-comment{
-        width: 40%;
-    }
     .footer-area{
         height: 600px;
     }
@@ -370,9 +282,6 @@ media quarie
     .header-section button{
         padding:15px 20px ;
         width: 150px;
-    }
-    .header-section button {
-        animation: none;
     }
     .header-section button a{
         font-size: 12px;
@@ -408,7 +317,7 @@ media quarie
     .main-section-second{
         grid-template-columns: repeat(2 , 1fr);
     }
-    .neuer{
+    .section-last-content{
         display: none;
     }
     .last-section-button{
@@ -416,40 +325,12 @@ media quarie
     }
 }
 
-
 @media screen and (min-width:769px) and (max-width:992px) {
     .header-section h1{
         font-size: 45px;
     }
     .header-section button{
-        width: 150px;
-    }
-    @keyframes button {
-        0%{
-            width: 150px;
-            left: 0;
-        }
-    
-        20%{
-            left: 130px;
-             width: 180px;
-        }
-        40%{
-            left:100px ;
-            width:200px;
-        }
-        60%{
-            left: 200px;
-            width: 180px;
-        }
-        80%{
-            left: 170px;
-            width: 200px;
-        }
-        100%{
-            left: 0;
-            width: 150px;
-        }
+        width: 180px;
     }
     .header-section button a{
         font-size:14px
@@ -478,8 +359,5 @@ media quarie
     }
     .section-link button:last-child{
         margin-right: 0;
-    }
-    .last-section-button{
-        display: block;
     }
 }
