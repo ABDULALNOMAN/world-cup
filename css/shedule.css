@@ -26,6 +26,7 @@ start header area
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(rgba(228, 220, 207, 0.4),rgba(125, 157, 156,0.9));
+    border-radius: 20px;
 
 }
 .header-section{
@@ -35,7 +36,7 @@ start header area
     font-weight: 700;
     font-size: 50px;
     color: #605e8a;
-    text-shadow: 3px 3px 3px rgb(130, 129, 137);
+    text-shadow: 2px 2px 3px rgb(130, 129, 137);
 }
 .header-section p{
     font-weight: 700;
